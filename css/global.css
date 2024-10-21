@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: "Mulish", sans-serif;
+}
+
+.body{
+    background-color: #F4F5FB;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    gap: 50px;
+}
+
+.container{
+    height: auto;
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgba(104, 103, 103, 0.082);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.541);
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.search input[type=text]{
+   height: 2.8rem;
+   border-radius: .75rem;
+   border: 2px solid  #D1D5DB;
+   background:  #FFF;
+   padding: 0px 18px;
+}
+
+.search button{
+    display: flex;
+    height: 2.8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #CA3884;
+    border-radius: .75rem;
+    border: none;
+    color: white;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.search button:hover{
+    background-color: #f10780;
+}
+
+.item{
+    background-color: #FFF;
+    outline: 1px solid #c0c0c0 ;
+    border-radius: .7rem;
+    width: 100%;
+    display: flex;
+    padding: 12px;
+}
+
+.input-select{
+    width: 100%;
+    height: 100%;	
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    
+}
+
+.container h1{
+    margin-bottom: 2.8rem ;
+    font-weight: 900;
+    font-size: 2.3rem;
+}
+
+.item-text{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.msg-delete{
+    background-color: #C93847;
+    color: white;
+    border-radius: .6rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.img-error{
+    color: white;
+}
+
+.btn-add{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+::placeholder{
+    font-size: 1rem;
+}
+
+.msg-add-item {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    background-color: green;
+    border-radius: .6rem;
+    gap: .5rem;
+    color: white;
+    font-weight: 500;
+}
+
+.img-delete:hover{
+    cursor: pointer;
+}
+
+.div-logo{
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.div-logo h1{
+    font-weight: 900;
+    font-size: 2.8rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 45rem;
+      
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 70rem;
+    }
+    .search{
+        flex-direction: row;
+    }
+    .search input[type=text]{
+        width: 70%;
+    }
+    .search button{
+        width: 30%;
+    }
+}
