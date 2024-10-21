@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(divLogo);
     divLogo.appendChild(imgLogo);
     divLogo.appendChild(h1Logo);
-});```
+});
+```
 
 
 
