@@ -57,7 +57,7 @@ O evento DOMContentLoaded garante que o código só seja executado após o carre
 
 2. 📦 **Criação do Corpo da Página e Área da Lista**
 ```JavaScript
- const body = document.querySelector('body');
+const body = document.querySelector('body');
 body.classList.add('body');
 
 const divContainer = document.createElement('div');
