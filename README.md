@@ -29,8 +29,7 @@ Aqui está a explicação detalhada de cada parte do código para ajudar inician
 
 1. 👨‍💻 **Estrutura do Cabeçalho**
  
-```
- document.addEventListener('DOMContentLoaded', () => {
+```document.addEventListener('DOMContentLoaded', () => {
     const divLogo = document.createElement('div');
     divLogo.classList.add('div-logo');
     
