@@ -43,4 +43,4 @@ Aqui está a explicação detalhada de cada parte do código para ajudar inician
     document.body.appendChild(divLogo);
     divLogo.appendChild(imgLogo);
     divLogo.appendChild(h1Logo);
-});```
+});
