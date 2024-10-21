@@ -12,3 +12,11 @@ O QuickList é uma aplicação simples de lista de compras desenvolvida em JavaS
 ❌ Remover Itens: Remova um item clicando no ícone de lixeira.
 
 💾 Persistência de Dados: A lista é salva no localStorage do navegador.
+
+🛠️ Tecnologias Utilizadas
+
+HTML: Estrutura da página.
+
+CSS: Estilos visuais.
+
+JavaScript: Lógica da aplicação, manipulação de eventos e armazenamento local.
