@@ -105,6 +105,7 @@ Se o campo estiver vazio, uma mensagem de alerta é exibida.
 O item é salvo no localStorage após ser adicionado à lista.
 
 4. 📝 **Função para Criar um Novo Item**
+```JavaScript
 function addItem(item) {
     const divSelect = document.createElement('div');
     divSelect.classList.add('item');
@@ -137,5 +138,76 @@ function addItem(item) {
 
     return divSelect;
 }
+```
+📖 **Explicação:**
 
-5. 
+A função addItem() cria um novo item na lista, com um checkbox e um rótulo de texto.
+
+Quando o checkbox é marcado, o item é riscado, e o estado é salvo no localStorage.
+
+5. ❌ **Função para Excluir Itens**
+```JavaScript
+function btnDelet(parentDiv) {
+    const imgDelete = document.createElement('img');
+    imgDelete.classList.add('img-delete');
+    imgDelete.src = './assets/delete01.svg';
+    imgDelete.alt = 'Deletar';
+
+    imgDelete.addEventListener('click', () => {
+        parentDiv.remove();
+        updateLocalStorage();
+    });
+
+    return imgDelete;
+}
+```
+📖 **Explicação:**
+
+A função btnDelet() cria um botão que remove um item da lista. Ao clicar no ícone de lixeira, o item é excluído e o localStorage é atualizado.
+
+6. 💾 **Salvando Dados com localStorage**
+```JavaScript
+function updateLocalStorage() {
+    const items = Array.from(divContainer.querySelectorAll('.item')).map(item => {
+        const label = item.querySelector('.item-text');
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        return {
+            text: label.textContent,
+            checked: checkbox.checked
+        };
+    });
+    saveToLocalStorage(items);
+}
+
+function saveToLocalStorage(items) {
+    localStorage.setItem('@github-favorites', JSON.stringify(items));
+}
+```
+
+📖 **Explicação:**
+
+updateLocalStorage() coleta todos os itens da lista e armazena-os no localStorage.
+
+Os itens são salvos no formato JSON e recuperados automaticamente ao carregar a página.
+
+ 🧩 **Carregando Itens do localStorage**
+ ```JavaScript
+const savedItems = JSON.parse(localStorage.getItem('@github-favorites')) || [];
+savedItems.forEach(item => {
+    divContainer.appendChild(addItem(item));
+});
+```
+📖 **Explicação:**
+
+Quando a página é carregada, os itens salvos no localStorage são recuperados e adicionados novamente à lista, garantindo a persistência dos dados.
+
+🚀 **Como Usar?**
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/quicklist.git
+```
+2. **Abra o arquivo** index.html no seu navegador.
+
+3. **Adicione, edite e remova itens da lista:** A aplicação funciona diretamente no navegador sem necessidade de instalação ou servidor.
+
