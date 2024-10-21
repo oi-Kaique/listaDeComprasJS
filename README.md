@@ -54,3 +54,31 @@ document.addEventListener('DOMContentLoaded', () => {
 Usamos document.createElement() para criar os elementos do cabeçalho dinamicamente (logo e título).
 
 O evento DOMContentLoaded garante que o código só seja executado após o carregamento completo da página.
+
+2. 📦 **Criação do Corpo da Página e Área da Lista**
+```JavaScript
+ const body = document.querySelector('body');
+body.classList.add('body');
+
+const divContainer = document.createElement('div');
+const divSearch = document.createElement('div');
+divContainer.classList.add('container');
+divSearch.classList.add('search');
+
+const h1 = document.createElement('h1');
+h1.textContent = "Compras da semana";
+divContainer.appendChild(h1);
+document.body.appendChild(divContainer);
+
+const input = document.createElement('input');
+input.type = 'text';
+input.placeholder = 'Adicione um novo item';
+divSearch.appendChild(input);
+
+const button = document.createElement('button');
+button.classList.add('btn-add');
+button.textContent = 'Adicionar Item';
+divSearch.appendChild(button);
+divContainer.appendChild(divSearch);
+```
+3. 
