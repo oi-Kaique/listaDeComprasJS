@@ -44,4 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(divLogo);
     divLogo.appendChild(imgLogo);
     divLogo.appendChild(h1Logo);
-});
+});```
+
+
+
+📖 **Explicação:**
+
+Usamos document.createElement() para criar os elementos do cabeçalho dinamicamente (logo e título).
+O evento DOMContentLoaded garante que o código só seja executado após o carregamento completo da página.
