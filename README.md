@@ -205,7 +205,7 @@ Quando a página é carregada, os itens salvos no localStorage são recuperados 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/quicklist.git
+git clone https://github.com/oi-Kaique/quicklist.git
 ```
 2. **Abra o arquivo** index.html no seu navegador.
 
